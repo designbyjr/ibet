@@ -8,14 +8,14 @@ Please make sure you have it installed in this repo directory for you to use usi
 
 # Directory Structure
 
-Kfflnk
-	- js (for javascript)
-	- src	- Controllers, Middleware, Operators, Calculate.php
-	- Tests
-	- router.php
-	- index.html
-	- composer.json
-	- phpunit.xml (for test suite)
+Kfflnk <br>
+	- /js (for javascript)<br>
+	- /src	- Controllers, Middleware, Operators, Calculate.php<br>
+	- /Tests<br>
+	- router.php<br>
+	- index.html<br>
+	- composer.json<br>
+	- phpunit.xml (for test suite)<br>
 
 # Installation
 You will be required to run this command in the command line inside the current directory where the composer.json file is.
