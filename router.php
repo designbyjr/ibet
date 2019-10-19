@@ -17,12 +17,6 @@ $data = json_decode($json);
 $key = isset($data->key) ? $data->key : null;
 
 
-//$key = isset($data['key']) ? $data['key'] : null;
-//$operand = isset($data['operand']) ? $data['operand'] : null;
-//$leftInput = isset($data['leftInput']) ? $data['leftInput'] : null;
-//$rightInput = isset($data['rightInput']) ? $data['rightInput'] : null;
-
-
 $middleware = new APIMiddleware($key,$data);
 
 if(!$middleware->validateKey())
