@@ -28,7 +28,8 @@ To start the internal php internal server run on the command line.
 >  php -S localhost:8000
 
 # Running the Tests
-To start the tests, you must have done all the installation steps and be in the kfflnk directory
+To start the tests, you must have done all the installation steps and be in the kfflnk directory.
+ Now run this command below in the command line.
 
 >  phpunit
 
