@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/js/jquery-serialize-object.js"></script>
+    <script>
+		$(document).ready(function() {
+
+			$('#calculate').click( function() {
+				var data = $('form#calculator').serializeJSON();
+				$.post( 'router.php', data,"json")
+					.done(function( data ) {
+                        $('#answerContainer').css("display","block");
+						$('#errorContainer').css("display","none");
+                        $('#answer').text(data.message);
+					})
+                    .fail(function (data) {
+						$('#errorContainer').css("display","block");
+						$('#answerContainer').css("display","none");
+						$('#error').text(data.responseJSON.message);
+					});
+			});
+		});
+
+    </script>
+    <style>
+        select{
+            background: grey;
+        }
+    </style>
+</head>
+<body>
+<div class="container p-2 m-2" id="answerContainer" style="display: none;">
+    <h1 class="text-lg">Answer:<h4 class="text-base" id="answer"></h4></h1>
+
+</div>
+<div class="container p-2 m-2" id="errorContainer" style="display: none;">
+    <h1 class="text-lg">Error:<h4 class="text-base text-warning" id="error"
+                                  style="color: red"></h4></h1>
+
+</div>
+<div class="container">
+    <form id="calculator"
+          class="g-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-1/4">
+        <input type="hidden" name="key" id="key"
+               value="4FD63680FC9E128279AE4EF26172A5DB88F538F3AEFCAD181D9C4BC3E0F67A69">
+        <label for="leftInput">
+        <input type="number" placeholder="Enter number" name="leftInput" id="leftInput"
+               onkeydown="return event.keyCode === 173 || event.keyCode === 189 || event.keyCode === 8 || event.keyCode === 46 ? true : !isNaN(Number(event.key))"
+               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </label>
+        <label for="operand">Operand
+        <select name="operand" id="operand" class="text-lg p-3 m-3 text-center">
+            <option value="U+1F47B">&#x1F47B;</option>
+            <option value="U+1F47D">&#x1F47D;</option>
+            <option value="U+1F480">&#x1F480;</option>
+            <option value="U+1F631">&#x1F631;</option>
+        </select>
+        </label>
+        <label for="rightInput">
+        <input type="number" name="rightInput" id="rightInput" placeholder="Enter number"
+               onkeydown="return event.keyCode === 173 || event.keyCode === 189 || event.keyCode === 8 || event.keyCode === 46 ? true : !isNaN(Number(event.key))"
+               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </label>
+            <button id="calculate"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline m-1" type="button">
+            Calculate
+        </button>
+    </form>
+</div>
+
+</body>
+</html>
