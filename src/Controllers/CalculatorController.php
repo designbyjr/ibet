@@ -20,6 +20,10 @@ Final class CalculatorController
 		$this->calculateClass = new Calculate();
 	}
 
+	/*
+	 * Uses the calculator class to determine operands class and return
+	 * an numeric value using calculate function.
+	 * */
 	function calculateThis()
 	{
 		$class = $this->calculateClass->determineOperandClass($this->operand);

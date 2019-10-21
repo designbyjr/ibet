@@ -23,11 +23,17 @@ class APIMiddleware
 
 	}
 
+	/*
+	 * Validates the CRSF SHA256 key as uppercase.
+	 */
 	public function validateKey() : bool
 	{
 		return strcmp(strtoupper($this->key),self::APIKEY) == 0;
 	}
 
+	/*
+	 * Validates the operands and the input values by type.
+	 */
 	public function validateInputs() : bool
 	{
 		unset($this->payload->key);

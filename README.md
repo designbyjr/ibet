@@ -33,6 +33,10 @@ To start the tests, you must have done all the installation steps and be in the 
 
 >  phpunit
 
+*If the command is not valid then run the following command.*
+
+>  php vendor/bin/phpunit
+
 To modify the tests, go to the directory "Tests" and open the CalculatorAPITest class in your IDE.
 Then just change either the rightInput or leftInputs to the values you want in the functions.
 Then change the assertEquals first parameter on the final line of each function to another numeric value.
