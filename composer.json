@@ -1,10 +1,10 @@
 {
     "autoload": {
         "psr-4": {
-            "kfflnk\\":"src/",
-            "kfflnk\\Middleware\\":"src/Middleware",
-            "kfflnk\\Controllers\\":"src/Controllers",
-            "kfflnk\\Operators\\":"src/Operators"
+            "ibet\\":"src/",
+            "ibet\\Middleware\\":"src/Middleware",
+            "ibet\\Controllers\\":"src/Controllers",
+            "ibet\\Operators\\":"src/Operators"
         }
     },
     "require-dev": {

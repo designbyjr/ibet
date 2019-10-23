@@ -8,7 +8,7 @@ Please make sure you have it installed in this repo directory for you to use usi
 
 # Directory Structure
 
-Kfflnk <br>
+ibet <br>
 	- /js (for javascript)<br>
 	- /src	- Controllers, Middleware, Operators, Calculate.php<br>
 	- /Tests<br>
@@ -28,7 +28,7 @@ To start the internal php internal server run on the command line.
 >  php -S localhost:8000
 
 # Running the Tests
-To start the tests, you must have done all the installation steps and be in the kfflnk directory.
+To start the tests, you must have done all the installation steps and be in the ibet directory.
  Now run this command below in the command line.
 
 >  phpunit

@@ -46,7 +46,7 @@
     <form id="calculator"
           class="g-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-1/4">
         <input type="hidden" name="key" id="key"
-               value="4FD63680FC9E128279AE4EF26172A5DB88F538F3AEFCAD181D9C4BC3E0F67A69">
+               value="0516DE6BAA770595166E3E4B3258D96A73066C3BA4EB2717DA1B3CA43299B777">
         <label for="leftInput">
         <input type="number" placeholder="Enter number" name="leftInput" id="leftInput"
                onkeydown="return event.keyCode === 173 || event.keyCode === 189 || event.keyCode === 8 || event.keyCode === 46 ? true : !isNaN(Number(event.key))"
@@ -54,10 +54,10 @@
         </label>
         <label for="operand">Operand
         <select name="operand" id="operand" class="text-lg p-3 m-3 text-center">
-            <option value="U+1F47B">&#x1F47B;</option>
-            <option value="U+1F47D">&#x1F47D;</option>
-            <option value="U+1F480">&#x1F480;</option>
-            <option value="U+1F631">&#x1F631;</option>
+            <option value="*">&#215;</option>
+            <option value="+">&#43;</option>
+            <option value="-">&#8722;</option>
+            <option value="/">&#247;</option>
         </select>
         </label>
         <label for="rightInput">

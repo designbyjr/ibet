@@ -1,16 +1,16 @@
 <?php
 
-namespace kfflnk\Middleware;
+namespace ibet\Middleware;
 
 class APIMiddleware
 {
 	//SHA256
-	const APIKEY = "4FD63680FC9E128279AE4EF26172A5DB88F538F3AEFCAD181D9C4BC3E0F67A69";
+	const APIKEY = "0516DE6BAA770595166E3E4B3258D96A73066C3BA4EB2717DA1B3CA43299B777";
 	const OPERANDS = [
-		"U+1F47B",
-		"U+1F47D",
-		"U+1F480",
-		"U+1F631"
+		"*",
+		"+",
+		"-",
+		"/"
 	];
 
 	private $key;
@@ -43,7 +43,6 @@ class APIMiddleware
 			}
 			elseif(!is_numeric($this->payload->leftInput) || !is_numeric($this->payload->rightInput))
 			{
-
 				return true;
 			}
 			return false;

@@ -1,9 +1,9 @@
 <?php
-namespace Kfflnk\Controllers;
+namespace ibet\Controllers;
 /*
  * This is the controller class that receives API end point calls
  */
-use kfflnk\Calculate;
+use ibet\Calculate;
 
 Final class CalculatorController
 {

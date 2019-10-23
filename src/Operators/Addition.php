@@ -1,7 +1,7 @@
 <?php
 
 
-namespace kfflnk\Operators;
+namespace ibet\Operators;
 
 final class Addition
 {

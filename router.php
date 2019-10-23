@@ -5,8 +5,8 @@
  * */
 header('Content-Type: application/json');
 require_once __DIR__ ."/vendor/autoload.php";
-use kfflnk\Controllers\CalculatorController as Controller;
-use kfflnk\Middleware\APIMiddleware;
+use ibet\Controllers\CalculatorController as Controller;
+use ibet\Middleware\APIMiddleware;
 $json = file_get_contents('php://input');
 $data = json_decode($json);
 

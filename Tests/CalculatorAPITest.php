@@ -13,7 +13,7 @@ final class CalculatorAPITest extends TestCase
 	public function setUp()
 	{
 		$this->http = new Client(['base_uri' => 'http://localhost:8000/']);
-		$this->key = "4FD63680FC9E128279AE4EF26172A5DB88F538F3AEFCAD181D9C4BC3E0F67A69";
+		$this->key = "0516DE6BAA770595166E3E4B3258D96A73066C3BA4EB2717DA1B3CA43299B777";
 	}
 
 	public function tearDown() {
@@ -27,7 +27,7 @@ final class CalculatorAPITest extends TestCase
 		$client = $this->http;
 
 		$data = array(
-			"operand" => "U+1F47D",
+			"operand" => "+",
 			"rightInput" => "5",
 			"leftInput" => "-2",
 			"key" => $this->key
@@ -47,7 +47,7 @@ final class CalculatorAPITest extends TestCase
 		$client = $this->http;
 
 		$data = array(
-			"operand" => "U+1F480",
+			"operand" => "-",
 			"rightInput" => "5",
 			"leftInput" => "-2",
 			"key" => $this->key
@@ -67,7 +67,7 @@ final class CalculatorAPITest extends TestCase
 		$client = $this->http;
 
 		$data = array(
-			"operand" => "U+1F47B",
+			"operand" => "*",
 			"rightInput" => "5",
 			"leftInput" => "6",
 			"key" => $this->key
@@ -87,7 +87,7 @@ final class CalculatorAPITest extends TestCase
 		$client = $this->http;
 
 		$data = array(
-			"operand" => "U+1F631",
+			"operand" => "/",
 			"rightInput" => "10",
 			"leftInput" => "5",
 			"key" => $this->key
