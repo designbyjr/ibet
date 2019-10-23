@@ -1,4 +1,4 @@
-﻿# Welcome to the Calculator Emoji!
+﻿# Welcome to the Calculator!
 
 This project has php unit tests included and will require you to have PHP 7.2 installed and the Curl extensions turned on in the PHP environment file.
 
